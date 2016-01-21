@@ -17,10 +17,10 @@ env:
 
 build:
   pre_ci:
-    - docker build -t=testing/testRuns .
+    - docker build -t=testing/testruns .
 
   pre_ci_boot:
-    image_name: testing/testRuns
+    image_name: testing/testruns
     image_tag: latest
     pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
