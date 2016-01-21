@@ -15,19 +15,18 @@ env:
     - M1=ONE
     - M2=TWO
 
-build:
-  pre_ci:
-    - docker build -t=testing/testRuns .
+script: true
+archive: true
 
-  pre_ci_boot:
-    image_name: testing/testRuns
-    image_tag: latest
-    pull: false
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+before_install:
+  - echo hi
+  
+install:
 
-  ci:
-    - ps -eax
-    - ls -al
+before_script:
 
+script:
 
-integrations:
+after_script:
+
+notifications:
