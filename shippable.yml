@@ -11,14 +11,14 @@ script: true
 archive: true
 
 before_install:
-  - echo hi
-  
+
 install:
 
 before_script:
 
 script:
-
+  - echo hi
+  
 after_script:
 
 notifications:
