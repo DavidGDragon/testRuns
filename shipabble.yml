@@ -5,15 +5,10 @@ language: node_js
 node_js:
   - 0.12
 
-env:
-  global:
-    - FOO=FUBU
-    - FO1=BUBU
-    - BOO=GUBU
 
-  matrix:
-    - M1=ONE
-    - M2=TWO
+env:
+  - FOO=FUBU FO1=BUBU BOO=GUBU M1=ONE
+  - FOO=FUBU FO1=BUBU BOO=GUBU M2=TWO
 
 script: true
 archive: true
