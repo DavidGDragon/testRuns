@@ -1,0 +1,33 @@
+# Language setting
+language: node_js
+
+# Version number
+node_js:
+  - 0.12
+
+env:
+  global:
+    - FOO=FUBU
+    - FO1=BUBU
+    - BOO=GUBU
+
+  matrix:
+    - M1=ONE
+    - M2=TWO
+
+build:
+  pre_ci:
+    - docker build -t=testing/testRuns .
+
+  pre_ci_boot:
+    image_name: testing/testRuns
+    image_tag: latest
+    pull: false
+    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+
+  ci:
+    - ps -eax
+    - ls -al
+
+
+integrations:
