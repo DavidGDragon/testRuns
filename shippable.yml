@@ -20,7 +20,7 @@ build:
     - docker build -t=testing/testruns .
 
   pre_ci_boot:
-    image_name: testing/testruns
+    image_name: node:slim
     image_tag: latest
     pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
