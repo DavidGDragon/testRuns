@@ -21,7 +21,7 @@ build:
 
   pre_ci_boot:
     image_name: node
-    image_tag: slim
+    image_tag: wheezy
     pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
