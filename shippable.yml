@@ -48,14 +48,3 @@ build:
   on_success:
     - echo "The job succeeded!!!!"
 
-deploy:
-  pre_build:
-    - ls
-    - ls -al
-
-integrations:
-
-
-  hub:
-
-  deploy:
