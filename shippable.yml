@@ -4,47 +4,26 @@ language: node_js
 # Version number
 node_js:
   - 0.12
-  - 4.2.0
-  
-services:
-  - elasticsearch
 
 env:
   global:
     - FOO=FUBU
     - FO1=BUBU
-
-#  matrix:
-#    - M1=ONE
-#    - M2=TWO
+    - BOO=GUBU
 
 build:
-#  cache: true
-#  pre_ci:
-#    - docker build --rm -t=ragesh/sample_node2 .
-
-  pre_ci_boot:
-    image_name: shipimg/msgbase
-    image_tag: latest
-    pull: true
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
-  ci:
-#    - ps -eax
-    - ls -al
-#    - if [ -f "/root/now.txt" ]; then cat /root/now.txt; fi
-#    - date > /root/now.txt
-#    - cat /root/now.txt
-#    - shippable_cache_container
-#    - if [ "$M2" == "TWO" ]; then foobar; fi
-
-#  post_ci:
-#    - docker push ragesh/sample_node2
-
-#  smoke_test:
-#    - sudo ls /
-  on_failure:
-    - echo "The job failed!!!!!"
+  pre_ci:
     
-  on_success:
-    - echo "The job succeeded!!!!"
+  pre_ci_boot:
 
+  ci:
+
+  post_ci:
+
+  smoke_test:
+    - sudo ls /
+
+deploy:
+  pre_build:
+    - ls
+    - ls -al
