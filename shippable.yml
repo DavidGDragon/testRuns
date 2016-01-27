@@ -10,6 +10,7 @@ env:
     - FOO=FUBU
     - FO1=BUBU
     - BOO=GUBU
+    - NOTHING=NEW
 
 build:
   pre_ci:
