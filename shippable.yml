@@ -16,9 +16,9 @@ build:
   pre_ci:
     
   pre_ci_boot:
-   - pip install pytest
-    
+   
   ci:
-  - py.test --verbose
+   - pip install pytest
+   - py.test --verbose
 
   post_ci:
