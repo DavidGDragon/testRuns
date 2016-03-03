@@ -18,5 +18,6 @@ build:
   pre_ci_boot:
    
   ci:
-
+    - curl google.com:80
+    
   post_ci:
