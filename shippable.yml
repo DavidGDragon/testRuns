@@ -1,9 +1,9 @@
 # Language setting
-language: node_js
+language: C
 
 # Version number
 node_js:
-  - 0.12
+  - 1
 
 env:
   global:
@@ -11,11 +11,6 @@ env:
     - FO1=BUBU
     - BOO=GUBU
     - NOTHING=NEW
-
-matrix:
-  include:
-    - node_js: 5
-      env: MAYO=BAD
 
 build:
   pre_ci:
