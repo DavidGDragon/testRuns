@@ -12,6 +12,11 @@ env:
     - BOO=GUBU
     - NOTHING=NEW
 
+matrix:
+  include:
+    - node_js: 0.13
+      env: MAYO=BAD
+
 build:
   pre_ci:
     
