@@ -14,7 +14,7 @@ env:
 
 matrix:
   include:
-    - node_js: 3.6.0
+    - node_js: 5
       env: MAYO=BAD
 
 build:
