@@ -20,5 +20,6 @@ build:
   ci:
     - echo BASE BRANCH $BASE_BRANCH
     - echo BRANCH $BRANCH
+    - echo HEAD_BRANCH $HEAD_BRANCH
     
   post_ci:
