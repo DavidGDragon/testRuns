@@ -18,6 +18,7 @@ build:
   pre_ci_boot:
    
   ci:
-    - curl google.com:80
+    - echo Target Branch is $BASE_BRANCH
+    - echo Running MapStore API Deploy, current branch is $BRANCH
     
   post_ci:
