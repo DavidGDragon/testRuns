@@ -18,7 +18,8 @@ build:
   pre_ci_boot:
    
   ci:
-    - echo Target Branch is $BASE_BRANCH
-    - echo Running MapStore API Deploy, current branch is $BRANCH
+    - echo BASE BRANCH $BASE_BRANCH
+    - echo BRANCH $BRANCH
+    - echo HEAD_BRANCH $HEAD_BRANCH
     
   post_ci:
