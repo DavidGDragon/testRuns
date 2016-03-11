@@ -1,9 +1,9 @@
 # Language setting
-language: C
+language: node_js
 
 # Version number
-node_js:
-  - 1
+node_js
+  - 0.12
 
 env:
   global:
