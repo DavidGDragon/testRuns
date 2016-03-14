@@ -21,6 +21,6 @@ build:
    
   ci:
   - echo $PROJECT_ID
-  - curl -H "Content-Type: application/json" -H "Authorization: $GHTOKEN" -X POST -d '{"projectId":"$PROJECT_ID","branchName":"master","type":"push"}' "https://apibeta.shippable.com/projects/$PROJECT_ID/newBuild"
-    
+  - 'curl -H "Content-Type: application/json" -H "Authorization: $GHTOKEN" -X POST -d \''{"projectId":"$PROJECT_ID","branchName":"master","type":"push"}\'' https://apibeta.shippable.com/projects/$PROJECT_ID/newBuild'
+  
   post_ci:
