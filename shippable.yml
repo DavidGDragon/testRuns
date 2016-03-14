@@ -11,17 +11,13 @@ env:
     - FO1=BUBU
     - BOO=GUBU
     - NOTHING=NEW
-    - PROJECT_ID=56c64e31c77dae78a8e6e7d1
-    - secure: 0eovI6OIT4rbKEgrhXrqKzwfVRp+Mfnr3e6sh7l880VUT7l+AHLyIoT3K3iREuyRWOQwEA8uRrdpdeTXZWP12sfkuC3sZz1FTHgmZ3Cx4NTlgufk4679l4xbsgBxG4S3yiXuIRZnWyTIZGL0PLc/706WfZLPATZLnngBlHhm6JqY2+JrpFIWoYUgzCOWVmRmaBjyl8bXMgb2aq/Uxay5W7A0xPkmraI6rwn886DP/McMTTKZqsTLooLct3o7leA9rPasecvhLWP6qxCTsFhf5eTL7MebMxQvegDIihCor04neBeK1tF/yj6jaLemenF+U98noRqwIBDivk7rB0IAxQ== 
-
+    
 build:
   pre_ci:
     
   pre_ci_boot:
    
   ci:
-  - echo $PROJECT_ID
-  - JSON='{"projectId":"$PROJECT_ID","branchName":"master","type":"push"}'
-  - 'curl -H "Content-Type: application/json" -H "Authorization: $GHTOKEN" -X POST -d $JSON https://apibeta.shippable.com/projects/$PROJECT_ID/newBuild'
+  - curl google.com
   
   post_ci:
