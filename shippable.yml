@@ -25,3 +25,6 @@ build:
 hub:
   - integrationName: realdocker
     type: docker
+    branches:
+        only:
+          - master
