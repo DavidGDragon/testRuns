@@ -14,17 +14,19 @@ env:
     
 build:
   pre_ci:
-    docker build -t=davidgdragon/fakeimage .
+
   pre_ci_boot:
    
   ci:
 
   post_ci:
-  - docker push davidgdragon/fakeimage
+    - sudo docker build -t davidgdragon/fakeimag:$BRANCH.$SHIPPABLE_BUILD_NUMBER --build-arg mytag=$BRANCH.$SHIPPABLE_BUILD_NUMBER .
+    - sudo docker push davidgdragon/fakeimag:$BRANCH.$SHIPPABLE_BUILD_NUMBER
 
-hub:
-  - integrationName: realdocker
-    type: docker
-    branches:
+integrations:
+  hub:
+    - integrationName: "trriplejay docker hub"
+      type: docker
+      branches:
         only:
           - master
