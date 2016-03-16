@@ -18,6 +18,10 @@ build:
   pre_ci_boot:
    
   ci:
-  - npm install utils
+  - docker push davidgdragon/fakeimage
   
   post_ci:
+
+hub:
+  - integrationName: realdocker
+    type: docker
