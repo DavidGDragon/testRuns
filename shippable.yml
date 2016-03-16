@@ -20,8 +20,8 @@ build:
   ci:
 
   post_ci:
-    - sudo docker build -t davidgdragon/fakeimag:$BRANCH.$SHIPPABLE_BUILD_NUMBER .
-    - sudo docker push davidgdragon/fakeimag:$BRANCH.$SHIPPABLE_BUILD_NUMBER
+    - sudo docker build -t davidgdragon/fakeimage:$BRANCH.$SHIPPABLE_BUILD_NUMBER .
+    - sudo docker push davidgdragon/fakeimage:$BRANCH.$SHIPPABLE_BUILD_NUMBER
 
 integrations:
   hub:
