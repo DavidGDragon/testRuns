@@ -18,9 +18,9 @@ build:
   pre_ci_boot:
    
   ci:
-  - docker push davidgdragon/fakeimage
-  
+
   post_ci:
+  - docker push davidgdragon/fakeimage
 
 hub:
   - integrationName: realdocker
