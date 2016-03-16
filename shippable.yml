@@ -1,9 +1,9 @@
 # Language setting
-language: node_js
+language: python
 
 # Version number
-node_js:
-  - 0.12
+python:
+  - 2.7.11
 
 env:
   global:
@@ -15,6 +15,7 @@ env:
 build:
   pre_ci:
     pip install --upgrade awscli
+    
   pre_ci_boot:
    
   ci:
