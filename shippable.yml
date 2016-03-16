@@ -14,7 +14,7 @@ env:
     
 build:
   pre_ci:
-    
+    docker build -t=avinci/sample_node .
   pre_ci_boot:
    
   ci:
