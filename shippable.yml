@@ -20,7 +20,7 @@ build:
   ci:
 
   post_ci:
-    - sudo docker build -t davidgdragon/fakeimag:$BRANCH.$SHIPPABLE_BUILD_NUMBER --build-arg mytag=$BRANCH.$SHIPPABLE_BUILD_NUMBER .
+    - sudo docker build -t davidgdragon/fakeimag:$BRANCH.$SHIPPABLE_BUILD_NUMBER .
     - sudo docker push davidgdragon/fakeimag:$BRANCH.$SHIPPABLE_BUILD_NUMBER
 
 integrations:
