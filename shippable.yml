@@ -14,11 +14,11 @@ env:
     
 build:
   pre_ci:
-    pip install --upgrade awscli
     
   pre_ci_boot:
    
   ci:
-
+    - exit 12345
+    
   post_ci:
  
